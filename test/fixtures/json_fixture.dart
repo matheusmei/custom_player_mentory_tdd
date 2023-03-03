@@ -8,4 +8,3 @@ dynamic loadJsonFixture(String name) {
 
 // é um ambiente para criar data,json, sql, 
 //pode ser criado mocks nos fixtures
-//flutter_config_
