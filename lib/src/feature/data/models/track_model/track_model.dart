@@ -1,8 +1,6 @@
-
-
-
-
 import 'package:freezed_annotation/freezed_annotation.dart';
+part 'track_model.freezed.dart';
+part 'track_model.g.dart';
 
 @freezed
 class TrackModel with _$TrackModel {
@@ -13,14 +11,15 @@ class TrackModel with _$TrackModel {
     required TrackExternalUrls trackExternalUrls,
     required String href,
     required String id,
+    required List<TrackImage> artistImage,
+    required String name,
+    required String releaseDate,
+    required String precisionReleaseDate,
+  }) = _TrackModel;
 
-
-
-
-
-  })
+  factory TrackModel.fromJson(Map<String, Object?> json) =>
+      _$TrackModelFromJson(json);
 }
-
 
 @unfreezed
 class TrackExternalUrls with _$TrackExternalUrls {
@@ -31,7 +30,6 @@ class TrackExternalUrls with _$TrackExternalUrls {
   factory TrackExternalUrls.fromJson(Map<String, Object?> json) =>
       _$TrackExternalUrlsFromJson(json);
 }
-
 
 @unfreezed
 class TrackImage with _$TrackImage {
