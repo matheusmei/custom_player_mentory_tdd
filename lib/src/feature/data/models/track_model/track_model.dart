@@ -10,6 +10,10 @@ class TrackModel with _$TrackModel {
     required String albumType,
     required int totalTracks,
     required List<String> availableMarkets,
+    required TrackExternalUrls trackExternalUrls,
+    required String href,
+    required String id,
+
 
 
 
@@ -26,4 +30,17 @@ class TrackExternalUrls with _$TrackExternalUrls {
 
   factory TrackExternalUrls.fromJson(Map<String, Object?> json) =>
       _$TrackExternalUrlsFromJson(json);
+}
+
+
+@unfreezed
+class TrackImage with _$TrackImage {
+  factory TrackImage({
+    required String url,
+    required int height,
+    required int width,
+  }) = _TrackImage;
+
+  factory TrackImage.fromJson(Map<String, Object?> json) =>
+      _$TrackImageFromJson(json);
 }
