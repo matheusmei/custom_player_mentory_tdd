@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:custom_player_mentory_tdd/src/feature/data/models/artist_model.dart';
+import 'package:custom_player_mentory_tdd/src/feature/data/models/artist_model/artist_model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../../fixtures/json_fixture.dart';
